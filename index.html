@@ -87,8 +87,11 @@
       margin: auto;
     }
 
-    .hero-inner {
-      max-width: 1120px;
+        .hero-inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
     }
 
         .hero .subtitle {
@@ -119,18 +122,23 @@
       filter: drop-shadow(0 12px 24px rgba(0,0,0,.25));
     }
 
-        .hero-text {
-      max-width: 1100px;
+            .hero-text {
+      width: 100%;
+      max-width: none;
       margin: 0 auto;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: clamp(30px, 3.2vw, 42px);
+        .hero h1 {
+      font-size: clamp(24px, 2.45vw, 34px);
       line-height: 1.12;
-      max-width: 760px;
-      margin: 0 auto 18px;
+      width: 100%;
+      max-width: none;
+      margin: 0 auto 22px;
       font-weight: 900;
+      white-space: nowrap;
+      color: #fff;
+      text-align: center;
     }
 
     .hero p {
@@ -366,6 +374,30 @@
       .why .why-grid,
       .services .secondary-grid {
         grid-template-columns: 1fr;
+      }
+    }
+  
+    /* CORREÇÃO FINAL DO TÍTULO DO HERO */
+    .hero .hero-text {
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    .hero h1 {
+      display: block !important;
+      width: 100% !important;
+      max-width: none !important;
+      white-space: nowrap !important;
+      font-size: clamp(24px, 2.45vw, 34px) !important;
+      color: #fff !important;
+      text-align: center !important;
+      letter-spacing: .2px;
+    }
+
+    @media (max-width: 760px) {
+      .hero h1 {
+        white-space: normal !important;
+        font-size: clamp(28px, 7vw, 38px) !important;
       }
     }
   </style>
