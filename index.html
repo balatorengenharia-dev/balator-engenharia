@@ -91,43 +91,46 @@
       max-width: 1120px;
     }
 
-    .hero .subtitle {
+        .hero .subtitle {
       color: var(--amarelo);
       font-size: 22px;
       font-weight: 900;
-      margin-bottom: 28px;
+      margin: 0 auto 34px;
       letter-spacing: .5px;
+      text-align: center;
+      display: block;
+      width: 100%;
     }
 
-    .hero-main {
+        .hero-main {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 24px;
+      gap: 0;
       margin-bottom: 28px;
     }
 
         .hero-logo-img {
-      width: 640px;
-      max-width: 92%;
+      width: 720px;
+      max-width: 95%;
       display: block;
-      margin: 0 auto 52px;
+      margin: 0 auto 58px;
       filter: drop-shadow(0 12px 24px rgba(0,0,0,.25));
     }
 
         .hero-text {
-      max-width: 1000px;
-      margin: 18px auto 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-        .hero h1 {
-      font-size: clamp(30px, 3.1vw, 42px);
+    .hero h1 {
+      font-size: clamp(30px, 3.2vw, 42px);
       line-height: 1.12;
-      max-width: 1100px;
+      max-width: 760px;
       margin: 0 auto 18px;
       font-weight: 900;
-      white-space: nowrap;
     }
 
     .hero p {
@@ -171,13 +174,14 @@
     }
 
     .services { background: var(--cinza); }
-    .services-grid {
+        .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 26px;
       margin-top: 36px;
+      align-items: stretch;
     }
-    .service-card {
+        .service-card {
       background: #fff;
       padding: 32px;
       min-height: 245px;
@@ -185,6 +189,7 @@
       box-shadow: 0 12px 32px rgba(0,0,0,.08);
       border-radius: 8px;
       transition: transform .25s ease, box-shadow .25s ease;
+      width: 100%;
     }
 
     .service-icon {
@@ -222,7 +227,11 @@
       border-top: 1px solid #dbe3ec;
     }
     .secondary-services h3 { text-align: center; color: var(--azul); font-size: 28px; margin-bottom: 28px; }
-    .secondary-grid { grid-template-columns: repeat(4, 1fr); }
+        .secondary-grid { 
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr)); 
+      gap: 26px;
+    }
     .secondary-grid .service-card { min-height: 170px; padding: 24px; }
 
     .why {
@@ -240,11 +249,12 @@
     }
     .why .container { position: relative; }
     .why h2 { color: #fff; max-width: 720px; }
-    .why-grid {
+        .why-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 32px;
       margin-top: 40px;
+      align-items: stretch;
     }
     .why-item {
       border: 1px solid rgba(255,255,255,.22);
@@ -298,9 +308,10 @@
       .intro, .contact-grid { grid-template-columns: 1fr; }
       .services-grid, .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .secondary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .hero { min-height: 640px; }
+      .hero { min-height: 620px; }
       .hero-main { flex-direction: column; align-items: center; text-align: center; gap: 22px; }
-      .hero-logo-img { width: 360px; margin-bottom: 30px; }
+      .hero-logo-img { width: 380px; max-width: 95%; margin-bottom: 38px; }
+      .hero .subtitle { font-size: 18px; margin-bottom: 28px; }
       .hero h1 { white-space: normal; font-size: clamp(28px, 7vw, 38px); }
       .hero p { font-size: 18px; }
       .footer-grid { grid-template-columns: 1fr; }
@@ -311,16 +322,13 @@
     @media (max-width: 560px) {
       .services-grid, .why-grid, .secondary-grid { grid-template-columns: 1fr; }
     }
-      .intro, .contact-grid { grid-template-columns: 1fr; }
-      .services-grid, .why-grid, .secondary-grid { grid-template-columns: 1fr; }
-      .hero { min-height: 620px; }
-      .hero-main { flex-direction: column; align-items: center; text-align: center; gap: 22px; }
-      .hero-logo-img { width: 330px; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .copy { text-align: left; }
-      .logo-img { width: 200px; }
+  
+    /* AJUSTES FINAIS BALATOR */
+    .hero-inner {
+      margin: 0 auto;
+      text-align: center;
     }
-      /* AJUSTES FINAIS BALATOR */
+
     .services .services-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -328,14 +336,17 @@
       align-items: stretch;
     }
 
-    .services .secondary-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
     .why .why-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 32px;
+      align-items: stretch;
+    }
+
+    .services .secondary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 26px;
       align-items: stretch;
     }
 
